@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iexceed.com/TransactionMasterQueryReq"
+	xmlns:tns="http://www.iexceed.com/TransactionMasterQueryReq"
+	xmlns:ans="http://www.iexceed.com/AccountDetails"
+	elementFormDefault="qualified">
+<import schemaLocation="AccountDetails.xsd" namespace="http://www.iexceed.com/AccountDetails"/>
+	<complexType name="TransactionMasterQueryReq">
+		<sequence>
+			<element name="TransactionId" type="string"></element>
+			<element name="AccountNum" type="string"></element>	
+            <element name="AccountDetails" type="ans:AccountDetails"></element>		
+		</sequence>
+	</complexType>
+</schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iexceed.com/TransactionMasterCreateReq"
+	xmlns:tns="http://www.iexceed.com/TransactionMasterCreateReq"
+	elementFormDefault="qualified">
+
+	<complexType name="TransactionMasterCreateReq">
+		<sequence>
+			<element name="TransactionId" type="string"></element>
+			<element name="AccountNum" type="string"></element>
+			<element name="TransactionDesc" type="string"></element>
+			<element name="TransactionAmt" type="double"></element>
+			<element name="TransactionType" type="string"></element>
+			<element name="TransactionCode" type="string"></element>
+			<element name="TransactionDate" type="date"></element>
+			<element name="TransactionCurrency" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>

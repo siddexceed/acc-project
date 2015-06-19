@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iexceed.com/AccountMasterUpdateReq"
+	xmlns:tns="http://www.iexceed.com/AccountMasterUpdateReq"
+	elementFormDefault="qualified">
+
+	<complexType name="AccountMasterUpdateReq">
+		<sequence>
+			<element name="AccountNum" type="string"></element>
+			<element name="AccountName" type="string"></element>
+			<element name="AccountType" type="string"></element>
+			<element name="AccountCurrency" type="string"></element>
+			<element name="CurrentBal" type="decimal"></element>
+			<element name="LineAmt" type="decimal"></element>
+			<element name="ClearingAmt" type="decimal"></element>
+			<element name="WithdrawableBal" type="decimal"></element>
+			<element name="CreationDate" type="date"></element>
+			<element name="LastTransactionDate" type="date"></element>
+			<element name="AccountAddress" type="string"></element>
+			<element name="CustomerId" type="string"></element>
+			
+		</sequence>
+	</complexType>
+</schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.iexceed.com/AccountMasterUpdateRes"
+	xmlns:tns="http://www.iexceed.com/AccountMasterUpdateRes"
+	xmlns:ens="http://www.iexceed.com/ErrorNode"
+	elementFormDefault="qualified">
+	<import schemaLocation="ErrorNode.xsd" namespace="http://www.iexceed.com/ErrorNode"/>
+	<complexType name="AccountMasterUpdateRes">
+		<sequence>
+			<element name="Message" type="string"/>
+			<element name="Error" type="ens:ComplexError"/>
+		</sequence>
+	</complexType>
+</schema>

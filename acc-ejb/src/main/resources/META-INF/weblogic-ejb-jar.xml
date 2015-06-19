@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-ejb-jar xmlns="http://xmlns.oracle.com/weblogic/weblogic-ejb-jar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-ejb-jar http://xmlns.oracle.com/weblogic/weblogic-ejb-jar/1.0/weblogic-ejb-jar.xsd">
+    <weblogic-enterprise-bean>
+        <ejb-name>AccountEJB</ejb-name>
+        <stateless-session-descriptor>
+            <business-interface-jndi-name-map>
+                <business-remote>com.iexceed.appzillon.client.AccountEJBRemote</business-remote>
+                <jndi-name>ejb/AccountEJB</jndi-name>
+            </business-interface-jndi-name-map>
+        </stateless-session-descriptor>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>AccountStatefulEJB</ejb-name>
+        <stateful-session-descriptor>
+            <business-interface-jndi-name-map>
+                <business-remote>com.iexceed.appzillon.client.AccountStatefulEJBRemote</business-remote>
+                <jndi-name>ejb/AccountStatefulEJB</jndi-name>
+            </business-interface-jndi-name-map>
+        </stateful-session-descriptor>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>AccountMDB</ejb-name>
+        <message-driven-descriptor>
+            <connection-factory-jndi-name>jms/AppzillonAccountCF</connection-factory-jndi-name>
+            <destination-jndi-name>jms/AppzillonAccountQueueRes</destination-jndi-name>
+        </message-driven-descriptor>
+        <resource-description>
+            <res-ref-name>jms/AppzillonAccountCF</res-ref-name>
+            <jndi-name>jms/AppzillonAccountCF</jndi-name>
+        </resource-description>
+        <resource-env-description>
+            <resource-env-ref-name>jms/AppzillonAccountQueueRes</resource-env-ref-name>
+            <jndi-name>jms/AppzillonAccountQueueRes</jndi-name>
+        </resource-env-description>
+		 <resource-env-description>
+            <resource-env-ref-name>jms/AppzillonAccountQueue</resource-env-ref-name>
+            <jndi-name>jms/AppzillonAccountQueue</jndi-name>
+        </resource-env-description>
+    </weblogic-enterprise-bean>
+</weblogic-ejb-jar>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iexceed.com/ErrorNode"
+	xmlns:tns="http://www.iexceed.com/ErrorNode" elementFormDefault="qualified">
+	<complexType name="ComplexError">
+		<sequence>
+			<element name="ErrorCode" type="string"></element>
+			<element name="ErrorMessage" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iexceed.com/AccountMasterQueryReq"
+	xmlns:tns="http://www.iexceed.com/AccountMasterQueryReq"
+	elementFormDefault="qualified">
+
+	<complexType name="AccountMasterQueryReq">
+		<sequence>
+			<element name="AccountNum" type="string"></element>
+						
+		</sequence>
+	</complexType>
+</schema>
